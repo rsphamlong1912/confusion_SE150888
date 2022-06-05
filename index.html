@@ -34,9 +34,14 @@
                             Contact</a></li>
 
                 </ul>
-                <span class="navbar-text">
+                <!-- <span class="navbar-text">
                     <a data-toggle="modal" data-target="#loginModal">
                         <span class="fa fa-sign-in"></span> Login</a>
+                </span> -->
+                <span class="navbar-text">
+                    <a id="loginLink">
+                        <span class="fa fa-sign-in"></span>Login
+                    </a>
                 </span>
             </div>
         </div>
@@ -175,8 +180,9 @@
                             <img src="img/logo.png" class="img-fluid">
                         </div>
                         <div class="col-12 col-sm-6">
-                            <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal"
-                                data-target="#ReserveModal">Reserve Table</a>
+                            <!-- <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal"
+                                data-target="#ReserveModal">Reserve Table</a> -->
+                                <a role="button" class="btn btn-block nav-link btn-warning" id="reserveButton">Reserve Table</a>
                         </div>
                     </div>
                 </div>
@@ -382,6 +388,23 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+        });
+
+        //For modal-Reserve Table
+        $(document).ready(function(){
+            $('#reserveButton').click(function(){
+                $('#ReserveModal').modal('show');
+
+            });
+
+        });
+
+        //For modal-Login
+        $(document).ready(function(){
+            $('#loginLink').click(function(){
+                $('#loginModal').modal('show');
+            });
+
         });
     </script>
 </body>
